@@ -32,14 +32,24 @@ public class OwingPrinterTest {
 
     @Test
     public void should_return_IE_when_input_MAC_IE(){
+
+        //given
         BannerRender bannerRender = new BannerRender();
+        //when
         String result = bannerRender.renderBanner("MAC","IE");
+        //then
         assertEquals("IE on Mac?",result);
     }
     @Test
     public void should_return_banner_when_input_fiex(){
+        //given
         BannerRender bannerRender = new BannerRender();
+        //when
         String result = bannerRender.renderBanner("HP","Fiex");
+        //then
         assertEquals("banner",result);
     }
+
+
+
 }

@@ -11,9 +11,13 @@ public class OwingPrinter {
         printBanner();
         double outstanding = culOwings(orders);
             // print details
-            System.out.println("name: " + name);
-            System.out.println("amount: " + outstanding);
+        printDetails("name: " + name, "amount: " + outstanding);
 
+    }
+
+    private void printDetails(String s, String s2) {
+        System.out.println(s);
+        System.out.println(s2);
     }
 
 
@@ -40,7 +44,7 @@ public class OwingPrinter {
 
 
 class Order {
-    private final double amount;
+    private  double amount;//delete final
 
     public Order(double amount) {
         this.amount = amount;
