@@ -1,5 +1,6 @@
 package com.tws.refactoring.extract_method;
 
+import com.tws.refactoring.extract_variable.BannerRender;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,20 @@ public class OwingPrinterTest {
 
     @Test
     public void printOwing() {
-//        System.out.print("hello");
-//        assertEquals("hello", outContent.toString());
+        System.out.print("hello");
+        assertEquals("hello", outContent.toString());
+    }
+
+    @Test
+    public void should_return_IE_when_input_MAC_IE(){
+        BannerRender bannerRender = new BannerRender();
+        String result = bannerRender.renderBanner("MAC","IE");
+        assertEquals("IE on Mac?",result);
+    }
+    @Test
+    public void should_return_banner_when_input_fiex(){
+        BannerRender bannerRender = new BannerRender();
+        String result = bannerRender.renderBanner("HP","Fiex");
+        assertEquals("banner",result);
     }
 }
